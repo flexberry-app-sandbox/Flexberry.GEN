@@ -28,66 +28,66 @@ export default Controller.extend({
             link: 'i-i-s-g-e-n-ед-изм-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-ед-изм-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-ед-изм-l.title'),
-            icon: 'archive',
+            icon: 'calendar',
             children: null
           }, {
             link: 'i-i-s-g-e-n-приказ-о-у-ц-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-приказ-о-у-ц-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-приказ-о-у-ц-l.title'),
-            icon: 'table',
+            icon: 'tasks',
             children: null
           }, {
             link: 'i-i-s-g-e-n-таб-товары-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-товары-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-товары-l.title'),
-            icon: 'tasks',
+            icon: 'list',
             children: null
           }, {
             link: 'i-i-s-g-e-n-отчет-ф-р-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-отчет-ф-р-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-отчет-ф-р-l.title'),
-            icon: 'list',
+            icon: 'address card',
             children: null
           }, {
             link: 'i-i-s-g-e-n-план-продаж-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-план-продаж-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-план-продаж-l.title'),
+            icon: 'chart line',
             children: null
           }, {
             link: 'i-i-s-g-e-n-таб-менеджер-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-менеджер-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-менеджер-l.title'),
-            icon: 'building',
+            icon: 'briefcase',
             children: null
           }, {
             link: 'i-i-s-g-e-n-таб-о-у-ц-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-о-у-ц-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-таб-о-у-ц-l.title'),
-            icon: 'folder',
+            icon: 'archive',
             children: null
           }, {
             link: 'i-i-s-g-e-n-данные-орг-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-данные-орг-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-данные-орг-l.title'),
-            icon: 'edit',
+            icon: 'list',
             children: null
           }, {
             link: 'i-i-s-g-e-n-должности-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-должности-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-должности-l.title'),
-            icon: 'table',
+            icon: 'tags',
             children: null
           }, {
             link: 'i-i-s-g-e-n-номенклатура-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-номенклатура-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-номенклатура-l.title'),
-            icon: 'suitcase',
             children: null
           }, {
             link: 'i-i-s-g-e-n-сотрудники-l',
             caption: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-сотрудники-l.caption'),
             title: i18n.t('forms.application.sitemap.g-e-n.i-i-s-g-e-n-сотрудники-l.title'),
-            icon: 'calendar',
+            icon: 'paperclip',
             children: null
           }]
         }
