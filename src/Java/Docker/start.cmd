@@ -1,0 +1,1 @@
+docker-compose -p gen-java up -d

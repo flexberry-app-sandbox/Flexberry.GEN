@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>GEN.model.EdIzm</class>
+        <class>GEN.model.PrikazOUC</class>
+        <class>GEN.model.TabTovary</class>
+        <class>GEN.model.OtchetFR</class>
+        <class>GEN.model.PlanProdazh</class>
+        <class>GEN.model.TabMenedzher</class>
+        <class>GEN.model.TabOUC</class>
+        <class>GEN.model.DannyeOrg</class>
+        <class>GEN.model.Dolzhnosti</class>
+        <class>GEN.model.Nomenklatura</class>
+        <class>GEN.model.Sotrudniki</class>
+        <class>GEN.model.FlexberryAdvLimit</class>
+        <class>GEN.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>GEN.model.NewPlatformFlexberryServicesLock</class>
+        <class>GEN.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>
