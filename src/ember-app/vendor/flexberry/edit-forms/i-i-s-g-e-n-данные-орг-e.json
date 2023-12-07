@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Данные орг",
+  "name": "IISGENДанныеОргE",
+  "className": "ДанныеОргE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-данные-орг",
+      "modelProjection": "ДанныеОргE"
+    }
+  ]
+}

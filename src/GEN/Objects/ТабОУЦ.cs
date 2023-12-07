@@ -21,13 +21,29 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ТабОУЦ.
+    /// Таб ОУЦ.
     /// </summary>
     // *** Start programmer edit section *** (ТабОУЦ CustomAttributes)
 
     // *** End programmer edit section *** (ТабОУЦ CustomAttributes)
     [AutoAltered()]
+    [Caption("Таб ОУЦ")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ТабОУЦE", new string[] {
+            "Цена as \'Цена\'",
+            "НомерСтроки as \'Номер строки\'",
+            "ДатаОконч as \'Дата оконч\'",
+            "ДатаНач as \'Дата нач\'",
+            "Номенклатура as \'Номенклатура\'",
+            "Номенклатура.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Номенклатура.Наименование"})]
+    [MasterViewDefineAttribute("ТабОУЦE", "Номенклатура", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [View("ТабОУЦL", new string[] {
+            "Цена as \'Цена\'",
+            "НомерСтроки as \'Номер строки\'",
+            "ДатаОконч as \'Дата оконч\'",
+            "ДатаНач as \'Дата нач\'",
+            "Номенклатура.Наименование as \'Наименование\'"})]
     public class ТабОУЦ : ICSSoft.STORMNET.DataObject
     {
         
@@ -173,7 +189,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ТабОУЦ.
+        /// Таб ОУЦ.
         /// </summary>
         // *** Start programmer edit section *** (ТабОУЦ.Номенклатура CustomAttributes)
 
@@ -203,6 +219,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ТабОУЦ.Номенклатура Set end)
 
                 // *** End programmer edit section *** (ТабОУЦ.Номенклатура Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ТабОУЦE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабОУЦE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабОУЦE", typeof(IIS.GEN.ТабОУЦ));
+                }
+            }
+            
+            /// <summary>
+            /// "ТабОУЦL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабОУЦL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабОУЦL", typeof(IIS.GEN.ТабОУЦ));
+                }
             }
         }
     }

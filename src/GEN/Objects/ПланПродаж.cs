@@ -21,13 +21,25 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ПланПродаж.
+    /// План продаж.
     /// </summary>
     // *** Start programmer edit section *** (ПланПродаж CustomAttributes)
 
     // *** End programmer edit section *** (ПланПродаж CustomAttributes)
     [AutoAltered()]
+    [Caption("План продаж")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ПланПродажE", new string[] {
+            "НомерДок as \'Номер док\'",
+            "ДатаСозд as \'Дата созд\'",
+            "Сотрудники as \'Сотрудники\'",
+            "Сотрудники.ФИО as \'ФИО\'"}, Hidden=new string[] {
+            "Сотрудники.ФИО"})]
+    [MasterViewDefineAttribute("ПланПродажE", "Сотрудники", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
+    [View("ПланПродажL", new string[] {
+            "НомерДок as \'Номер док\'",
+            "ДатаСозд as \'Дата созд\'",
+            "Сотрудники.ФИО as \'ФИО\'"})]
     public class ПланПродаж : ICSSoft.STORMNET.DataObject
     {
         
@@ -106,7 +118,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ПланПродаж.
+        /// План продаж.
         /// </summary>
         // *** Start programmer edit section *** (ПланПродаж.Сотрудники CustomAttributes)
 
@@ -136,6 +148,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ПланПродаж.Сотрудники Set end)
 
                 // *** End programmer edit section *** (ПланПродаж.Сотрудники Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ПланПродажE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ПланПродажE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ПланПродажE", typeof(IIS.GEN.ПланПродаж));
+                }
+            }
+            
+            /// <summary>
+            /// "ПланПродажL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ПланПродажL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ПланПродажL", typeof(IIS.GEN.ПланПродаж));
+                }
             }
         }
     }

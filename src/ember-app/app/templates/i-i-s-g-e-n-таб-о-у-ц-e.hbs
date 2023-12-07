@@ -1,0 +1,85 @@
+<h3 class="ui header">{{t "forms.i-i-s-g-e-n-таб-о-у-ц-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.цена
+      class=(if (v-get validationModel "цена" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-о-у-ц-e.цена-caption")
+      data-test-i-i-s-g-e-n-таб-о-у-ц-e-цена=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "цена" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерСтроки
+      class=(if (v-get validationModel "номерСтроки" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-о-у-ц-e.номерСтроки-caption")
+      data-test-i-i-s-g-e-n-таб-о-у-ц-e-номерСтроки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерСтроки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.датаОконч
+      class=(if (v-get validationModel "датаОконч" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-о-у-ц-e.датаОконч-caption")
+      data-test-i-i-s-g-e-n-таб-о-у-ц-e-датаОконч=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОконч" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.датаНач
+      class=(if (v-get validationModel "датаНач" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-о-у-ц-e.датаНач-caption")
+      data-test-i-i-s-g-e-n-таб-о-у-ц-e-датаНач=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаНач" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-g-e-n-таб-о-у-ц-e.номенклатура-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.номенклатура
+      displayAttributeName="наименование"
+      autocomplete=true
+      relationName="номенклатура"
+      projection="НоменклатураL"
+      title=(t "forms.i-i-s-g-e-n-таб-о-у-ц-e.номенклатура-caption")
+      readonly=readonly
+      componentName="номенклатураLookup"
+      class=(if (v-get validationModel "номенклатура" "isInvalid") "error")
+      data-test-i-i-s-g-e-n-таб-о-у-ц-e-номенклатура=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номенклатура" "message")}}
+  </div>
+</form>

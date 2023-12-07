@@ -21,13 +21,52 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ОтчетФР.
+    /// Отчет ФР.
     /// </summary>
     // *** Start programmer edit section *** (ОтчетФР CustomAttributes)
 
     // *** End programmer edit section *** (ОтчетФР CustomAttributes)
     [AutoAltered()]
+    [Caption("Отчет ФР")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ОтчетФРE", new string[] {
+            "Выручка as \'Выручка\'",
+            "ПрочРасходы as \'Проч расходы\'",
+            "ПостНалОбяз as \'Пост нал обяз\'",
+            "ПрочДоходы as \'Проч доходы\'",
+            "ДИРОтСотр as \'Д и р от сотр\'",
+            "СумПродаж as \'Сум продаж\'",
+            "СебПродаж as \'Себ продаж\'",
+            "ПрочНалОбяз as \'Проч нал обяз\'",
+            "УправРасходы as \'Управ расходы\'",
+            "ДатаОконч as \'Дата оконч\'",
+            "КомРасходы as \'Ком расходы\'",
+            "ДатаНачала as \'Дата начала\'",
+            "НомерСтроки as \'Номер строки\'",
+            "ДанныеОрг as \'Данные орг\'",
+            "ДанныеОрг.Email as \'Email\'",
+            "Сотрудники as \'Сотрудники\'",
+            "Сотрудники.ФИО as \'ФИО\'"}, Hidden=new string[] {
+            "ДанныеОрг.Email",
+            "Сотрудники.ФИО"})]
+    [MasterViewDefineAttribute("ОтчетФРE", "ДанныеОрг", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Email")]
+    [MasterViewDefineAttribute("ОтчетФРE", "Сотрудники", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
+    [View("ОтчетФРL", new string[] {
+            "Выручка as \'Выручка\'",
+            "ПрочРасходы as \'Проч расходы\'",
+            "ПостНалОбяз as \'Пост нал обяз\'",
+            "ПрочДоходы as \'Проч доходы\'",
+            "ДИРОтСотр as \'Д и р от сотр\'",
+            "СумПродаж as \'Сум продаж\'",
+            "СебПродаж as \'Себ продаж\'",
+            "ПрочНалОбяз as \'Проч нал обяз\'",
+            "УправРасходы as \'Управ расходы\'",
+            "ДатаОконч as \'Дата оконч\'",
+            "КомРасходы as \'Ком расходы\'",
+            "ДатаНачала as \'Дата начала\'",
+            "НомерСтроки as \'Номер строки\'",
+            "ДанныеОрг.Email as \'Email\'",
+            "Сотрудники.ФИО as \'ФИО\'"})]
     public class ОтчетФР : ICSSoft.STORMNET.DataObject
     {
         
@@ -472,7 +511,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ОтчетФР.
+        /// Отчет ФР.
         /// </summary>
         // *** Start programmer edit section *** (ОтчетФР.ДанныеОрг CustomAttributes)
 
@@ -506,7 +545,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ОтчетФР.
+        /// Отчет ФР.
         /// </summary>
         // *** Start programmer edit section *** (ОтчетФР.Сотрудники CustomAttributes)
 
@@ -536,6 +575,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ОтчетФР.Сотрудники Set end)
 
                 // *** End programmer edit section *** (ОтчетФР.Сотрудники Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ОтчетФРE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ОтчетФРE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ОтчетФРE", typeof(IIS.GEN.ОтчетФР));
+                }
+            }
+            
+            /// <summary>
+            /// "ОтчетФРL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ОтчетФРL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ОтчетФРL", typeof(IIS.GEN.ОтчетФР));
+                }
             }
         }
     }

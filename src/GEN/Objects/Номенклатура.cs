@@ -28,6 +28,17 @@ namespace IIS.GEN
     // *** End programmer edit section *** (Номенклатура CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("НоменклатураE", new string[] {
+            "КодПозиции as \'Код позиции\'",
+            "Наименование as \'Наименование\'",
+            "ЕдИзм as \'Ед изм\'",
+            "ЕдИзм.Единица as \'Единица\'"}, Hidden=new string[] {
+            "ЕдИзм.Единица"})]
+    [MasterViewDefineAttribute("НоменклатураE", "ЕдИзм", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Единица")]
+    [View("НоменклатураL", new string[] {
+            "КодПозиции as \'Код позиции\'",
+            "Наименование as \'Наименование\'",
+            "ЕдИзм.Единица as \'Единица\'"})]
     public class Номенклатура : ICSSoft.STORMNET.DataObject
     {
         
@@ -136,6 +147,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (Номенклатура.ЕдИзм Set end)
 
                 // *** End programmer edit section *** (Номенклатура.ЕдИзм Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "НоменклатураE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View НоменклатураE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("НоменклатураE", typeof(IIS.GEN.Номенклатура));
+                }
+            }
+            
+            /// <summary>
+            /// "НоменклатураL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View НоменклатураL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("НоменклатураL", typeof(IIS.GEN.Номенклатура));
+                }
             }
         }
     }

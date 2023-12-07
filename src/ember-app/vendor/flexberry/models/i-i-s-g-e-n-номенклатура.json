@@ -35,7 +35,92 @@
     }
   ],
   "hasMany": [],
-  "projections": [],
+  "projections": [
+    {
+      "name": "НоменклатураE",
+      "modelName": "i-i-s-g-e-n-номенклатура",
+      "attrs": [
+        {
+          "name": "кодПозиции",
+          "caption": "Код позиции",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Единица",
+          "lookupValueField": "единица",
+          "relationName": "ЕдИзм",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "единица",
+              "caption": "Единица",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Ед изм",
+          "name": "едИзм",
+          "relatedTo": "i-i-s-g-e-n-ед-изм",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "НоменклатураL",
+      "modelName": "i-i-s-g-e-n-номенклатура",
+      "attrs": [
+        {
+          "name": "кодПозиции",
+          "caption": "Код позиции",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ЕдИзм",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "единица",
+              "caption": "Единица",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Единица",
+          "name": "едИзм",
+          "relatedTo": "i-i-s-g-e-n-ед-изм",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

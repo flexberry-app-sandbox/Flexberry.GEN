@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   датаНач: DS.attr('string'),
@@ -45,4 +46,26 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('ТабОУЦE', 'i-i-s-g-e-n-таб-о-у-ц', {
+    цена: attr('Цена', { index: 0 }),
+    номерСтроки: attr('Номер строки', { index: 1 }),
+    датаОконч: attr('Дата оконч', { index: 2 }),
+    датаНач: attr('Дата нач', { index: 3 }),
+    номенклатура: belongsTo('i-i-s-g-e-n-номенклатура', 'Номенклатура', {
+      наименование: attr('Наименование', { index: 5, hidden: true })
+    }, { index: 4, displayMemberPath: 'наименование' })
+  });
+
+  modelClass.defineProjection('ТабОУЦL', 'i-i-s-g-e-n-таб-о-у-ц', {
+    цена: attr('Цена', { index: 0 }),
+    номерСтроки: attr('Номер строки', { index: 1 }),
+    датаОконч: attr('Дата оконч', { index: 2 }),
+    датаНач: attr('Дата нач', { index: 3 }),
+    номенклатура: belongsTo('i-i-s-g-e-n-номенклатура', 'Наименование', {
+      наименование: attr('Наименование', { index: 4 })
+    }, { index: -1, hidden: true })
+  });
 };

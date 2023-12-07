@@ -1,6 +1,92 @@
 ﻿{
-  "applicationCaption": null,
-  "applicationTitle": null,
-  "items": [],
+  "applicationCaption": "GEN",
+  "applicationTitle": "GEN",
+  "items": [
+    {
+      "link": null,
+      "menuName": "g-e-n",
+      "caption": "GEN",
+      "title": "GEN",
+      "children": [
+        {
+          "link": "i-i-s-g-e-n-ед-изм-l",
+          "menuName": null,
+          "caption": "Ед изм",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-приказ-о-у-ц-l",
+          "menuName": null,
+          "caption": "Приказ ОУЦ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-таб-товары-l",
+          "menuName": null,
+          "caption": "Таб товары",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-отчет-ф-р-l",
+          "menuName": null,
+          "caption": "Отчет ФР",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-план-продаж-l",
+          "menuName": null,
+          "caption": "План продаж",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-таб-менеджер-l",
+          "menuName": null,
+          "caption": "Таб менеджер",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-таб-о-у-ц-l",
+          "menuName": null,
+          "caption": "Таб ОУЦ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-данные-орг-l",
+          "menuName": null,
+          "caption": "Данные орг",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-должности-l",
+          "menuName": null,
+          "caption": "Должности",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-номенклатура-l",
+          "menuName": null,
+          "caption": "Номенклатура",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-g-e-n-сотрудники-l",
+          "menuName": null,
+          "caption": "Сотрудники",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
   "mobile": true
 }

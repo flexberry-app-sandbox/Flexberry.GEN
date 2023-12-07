@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   выручка: DS.attr('number'),
@@ -125,4 +126,50 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('ОтчетФРE', 'i-i-s-g-e-n-отчет-ф-р', {
+    выручка: attr('Выручка', { index: 0 }),
+    прочРасходы: attr('Проч расходы', { index: 1 }),
+    постНалОбяз: attr('Пост нал обяз', { index: 2 }),
+    прочДоходы: attr('Проч доходы', { index: 3 }),
+    дИРОтСотр: attr('Д и р от сотр', { index: 4 }),
+    сумПродаж: attr('Сум продаж', { index: 5 }),
+    себПродаж: attr('Себ продаж', { index: 6 }),
+    прочНалОбяз: attr('Проч нал обяз', { index: 7 }),
+    управРасходы: attr('Управ расходы', { index: 8 }),
+    датаОконч: attr('Дата оконч', { index: 9 }),
+    комРасходы: attr('Ком расходы', { index: 10 }),
+    датаНачала: attr('Дата начала', { index: 11 }),
+    номерСтроки: attr('Номер строки', { index: 12 }),
+    данныеОрг: belongsTo('i-i-s-g-e-n-данные-орг', 'Данные орг', {
+      email: attr('Email', { index: 14, hidden: true })
+    }, { index: 13, displayMemberPath: 'email' }),
+    сотрудники: belongsTo('i-i-s-g-e-n-сотрудники', 'Сотрудники', {
+      фИО: attr('ФИО', { index: 16, hidden: true })
+    }, { index: 15, displayMemberPath: 'фИО' })
+  });
+
+  modelClass.defineProjection('ОтчетФРL', 'i-i-s-g-e-n-отчет-ф-р', {
+    выручка: attr('Выручка', { index: 0 }),
+    прочРасходы: attr('Проч расходы', { index: 1 }),
+    постНалОбяз: attr('Пост нал обяз', { index: 2 }),
+    прочДоходы: attr('Проч доходы', { index: 3 }),
+    дИРОтСотр: attr('Д и р от сотр', { index: 4 }),
+    сумПродаж: attr('Сум продаж', { index: 5 }),
+    себПродаж: attr('Себ продаж', { index: 6 }),
+    прочНалОбяз: attr('Проч нал обяз', { index: 7 }),
+    управРасходы: attr('Управ расходы', { index: 8 }),
+    датаОконч: attr('Дата оконч', { index: 9 }),
+    комРасходы: attr('Ком расходы', { index: 10 }),
+    датаНачала: attr('Дата начала', { index: 11 }),
+    номерСтроки: attr('Номер строки', { index: 12 }),
+    данныеОрг: belongsTo('i-i-s-g-e-n-данные-орг', 'Email', {
+      email: attr('Email', { index: 13 })
+    }, { index: -1, hidden: true }),
+    сотрудники: belongsTo('i-i-s-g-e-n-сотрудники', 'ФИО', {
+      фИО: attr('ФИО', { index: 14 })
+    }, { index: -1, hidden: true })
+  });
 };

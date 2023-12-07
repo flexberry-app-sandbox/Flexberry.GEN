@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ЕдИзм",
+      "projection": "ЕдИзмL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Номенклатура",
+  "name": "IISGENНоменклатураE",
+  "className": "НоменклатураE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-номенклатура",
+      "modelProjection": "НоменклатураE"
+    }
+  ]
+}

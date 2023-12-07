@@ -28,6 +28,14 @@ namespace IIS.GEN
     // *** End programmer edit section *** (Должности CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ДолжностиE", new string[] {
+            "Наименование as \'Наименование\'",
+            "Обязанности as \'Обязанности\'",
+            "IDДолжности as \'I d должности\'"})]
+    [View("ДолжностиL", new string[] {
+            "Наименование as \'Наименование\'",
+            "Обязанности as \'Обязанности\'",
+            "IDДолжности as \'I d должности\'"})]
     public class Должности : ICSSoft.STORMNET.DataObject
     {
         
@@ -134,6 +142,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (Должности.Обязанности Set end)
 
                 // *** End programmer edit section *** (Должности.Обязанности Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ДолжностиE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДолжностиE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДолжностиE", typeof(IIS.GEN.Должности));
+                }
+            }
+            
+            /// <summary>
+            /// "ДолжностиL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДолжностиL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДолжностиL", typeof(IIS.GEN.Должности));
+                }
             }
         }
     }

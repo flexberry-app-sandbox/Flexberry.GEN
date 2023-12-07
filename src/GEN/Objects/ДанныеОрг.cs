@@ -21,13 +21,32 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ДанныеОрг.
+    /// Данные орг.
     /// </summary>
     // *** Start programmer edit section *** (ДанныеОрг CustomAttributes)
 
     // *** End programmer edit section *** (ДанныеОрг CustomAttributes)
     [AutoAltered()]
+    [Caption("Данные орг")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ДанныеОргE", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "Email as \'Email\'",
+            "Наименование as \'Наименование\'",
+            "ИНН as \'ИНН\'",
+            "ОГРН as \'ОГРН\'",
+            "Телефон as \'Телефон\'",
+            "ОПФ as \'ОПФ\'",
+            "ЮрАдрес as \'Юр адрес\'"})]
+    [View("ДанныеОргL", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "Email as \'Email\'",
+            "Наименование as \'Наименование\'",
+            "ИНН as \'ИНН\'",
+            "ОГРН as \'ОГРН\'",
+            "Телефон as \'Телефон\'",
+            "ОПФ as \'ОПФ\'",
+            "ЮрАдрес as \'Юр адрес\'"})]
     public class ДанныеОрг : ICSSoft.STORMNET.DataObject
     {
         
@@ -301,6 +320,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ДанныеОрг.ЮрАдрес Set end)
 
                 // *** End programmer edit section *** (ДанныеОрг.ЮрАдрес Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ДанныеОргE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДанныеОргE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДанныеОргE", typeof(IIS.GEN.ДанныеОрг));
+                }
+            }
+            
+            /// <summary>
+            /// "ДанныеОргL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДанныеОргL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДанныеОргL", typeof(IIS.GEN.ДанныеОрг));
+                }
             }
         }
     }

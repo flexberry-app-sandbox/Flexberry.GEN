@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-план-продаж-e",
+  "editForm": "i-i-s-g-e-n-план-продаж-e",
+  "external": false,
+  "caption": "План продаж",
+  "name": "IISGENПланПродажL",
+  "className": "ПланПродажL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-план-продаж",
+      "modelProjection": "ПланПродажL"
+    }
+  ]
+}

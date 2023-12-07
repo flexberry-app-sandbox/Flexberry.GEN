@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   итогоЗаГод: DS.attr('number'),
@@ -54,4 +55,28 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('ТабМенеджерE', 'i-i-s-g-e-n-таб-менеджер', {
+    планНаМесяц: attr('План на месяц', { index: 0 }),
+    итогоЗаГод: attr('Итого за год', { index: 1 }),
+    номерСтроки: attr('Номер строки', { index: 2 }),
+    наимМесяца: attr('Наим месяца', { index: 3 }),
+    размерПрод: attr('Размер прод', { index: 4 }),
+    сотрудники: belongsTo('i-i-s-g-e-n-сотрудники', 'Сотрудники', {
+      фИО: attr('ФИО', { index: 6, hidden: true })
+    }, { index: 5, displayMemberPath: 'фИО' })
+  });
+
+  modelClass.defineProjection('ТабМенеджерL', 'i-i-s-g-e-n-таб-менеджер', {
+    планНаМесяц: attr('План на месяц', { index: 0 }),
+    итогоЗаГод: attr('Итого за год', { index: 1 }),
+    номерСтроки: attr('Номер строки', { index: 2 }),
+    наимМесяца: attr('Наим месяца', { index: 3 }),
+    размерПрод: attr('Размер прод', { index: 4 }),
+    сотрудники: belongsTo('i-i-s-g-e-n-сотрудники', 'ФИО', {
+      фИО: attr('ФИО', { index: 5 })
+    }, { index: -1, hidden: true })
+  });
 };

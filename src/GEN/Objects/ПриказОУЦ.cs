@@ -21,13 +21,25 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ПриказОУЦ.
+    /// Приказ ОУЦ.
     /// </summary>
     // *** Start programmer edit section *** (ПриказОУЦ CustomAttributes)
 
     // *** End programmer edit section *** (ПриказОУЦ CustomAttributes)
     [AutoAltered()]
+    [Caption("Приказ ОУЦ")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ПриказОУЦE", new string[] {
+            "ДатаСозд as \'Дата созд\'",
+            "НомерДок as \'Номер док\'",
+            "Сотрудники as \'Сотрудники\'",
+            "Сотрудники.ФИО as \'ФИО\'"}, Hidden=new string[] {
+            "Сотрудники.ФИО"})]
+    [MasterViewDefineAttribute("ПриказОУЦE", "Сотрудники", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
+    [View("ПриказОУЦL", new string[] {
+            "ДатаСозд as \'Дата созд\'",
+            "НомерДок as \'Номер док\'",
+            "Сотрудники.ФИО as \'ФИО\'"})]
     public class ПриказОУЦ : ICSSoft.STORMNET.DataObject
     {
         
@@ -106,7 +118,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ПриказОУЦ.
+        /// Приказ ОУЦ.
         /// </summary>
         // *** Start programmer edit section *** (ПриказОУЦ.Сотрудники CustomAttributes)
 
@@ -136,6 +148,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ПриказОУЦ.Сотрудники Set end)
 
                 // *** End programmer edit section *** (ПриказОУЦ.Сотрудники Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ПриказОУЦE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ПриказОУЦE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ПриказОУЦE", typeof(IIS.GEN.ПриказОУЦ));
+                }
+            }
+            
+            /// <summary>
+            /// "ПриказОУЦL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ПриказОУЦL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ПриказОУЦL", typeof(IIS.GEN.ПриказОУЦ));
+                }
             }
         }
     }

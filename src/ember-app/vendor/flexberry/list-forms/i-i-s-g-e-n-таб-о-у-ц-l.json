@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-таб-о-у-ц-e",
+  "editForm": "i-i-s-g-e-n-таб-о-у-ц-e",
+  "external": false,
+  "caption": "Таб ОУЦ",
+  "name": "IISGENТабОУЦL",
+  "className": "ТабОУЦL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-о-у-ц",
+      "modelProjection": "ТабОУЦL"
+    }
+  ]
+}

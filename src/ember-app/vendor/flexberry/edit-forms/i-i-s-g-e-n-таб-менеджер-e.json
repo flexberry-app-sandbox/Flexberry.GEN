@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Таб менеджер",
+  "name": "IISGENТабМенеджерE",
+  "className": "ТабМенеджерE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-менеджер",
+      "modelProjection": "ТабМенеджерE"
+    }
+  ]
+}

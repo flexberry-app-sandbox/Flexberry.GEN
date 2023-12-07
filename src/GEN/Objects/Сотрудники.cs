@@ -28,6 +28,19 @@ namespace IIS.GEN
     // *** End programmer edit section *** (Сотрудники CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("СотрудникиE", new string[] {
+            "IDСотрудника as \'I d сотрудника\'",
+            "Телефон as \'Телефон\'",
+            "ФИО as \'ФИО\'",
+            "Должности as \'Должности\'",
+            "Должности.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Должности.Наименование"})]
+    [MasterViewDefineAttribute("СотрудникиE", "Должности", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [View("СотрудникиL", new string[] {
+            "IDСотрудника as \'I d сотрудника\'",
+            "Телефон as \'Телефон\'",
+            "ФИО as \'ФИО\'",
+            "Должности.Наименование as \'Наименование\'"})]
     public class Сотрудники : ICSSoft.STORMNET.DataObject
     {
         
@@ -169,6 +182,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (Сотрудники.Должности Set end)
 
                 // *** End programmer edit section *** (Сотрудники.Должности Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "СотрудникиE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View СотрудникиE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("СотрудникиE", typeof(IIS.GEN.Сотрудники));
+                }
+            }
+            
+            /// <summary>
+            /// "СотрудникиL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View СотрудникиL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("СотрудникиL", typeof(IIS.GEN.Сотрудники));
+                }
             }
         }
     }

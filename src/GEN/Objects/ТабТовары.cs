@@ -21,13 +21,31 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ТабТовары.
+    /// Таб товары.
     /// </summary>
     // *** Start programmer edit section *** (ТабТовары CustomAttributes)
 
     // *** End programmer edit section *** (ТабТовары CustomAttributes)
     [AutoAltered()]
+    [Caption("Таб товары")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ТабТоварыE", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "ПланНаМесяц as \'План на месяц\'",
+            "ИтогоЗаГод as \'Итого за год\'",
+            "РазмерПрод as \'Размер прод\'",
+            "НаимМесяца as \'Наим месяца\'",
+            "Номенклатура as \'Номенклатура\'",
+            "Номенклатура.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Номенклатура.Наименование"})]
+    [MasterViewDefineAttribute("ТабТоварыE", "Номенклатура", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [View("ТабТоварыL", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "ПланНаМесяц as \'План на месяц\'",
+            "ИтогоЗаГод as \'Итого за год\'",
+            "РазмерПрод as \'Размер прод\'",
+            "НаимМесяца as \'Наим месяца\'",
+            "Номенклатура.Наименование as \'Наименование\'"})]
     public class ТабТовары : ICSSoft.STORMNET.DataObject
     {
         
@@ -205,7 +223,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ТабТовары.
+        /// Таб товары.
         /// </summary>
         // *** Start programmer edit section *** (ТабТовары.Номенклатура CustomAttributes)
 
@@ -235,6 +253,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ТабТовары.Номенклатура Set end)
 
                 // *** End programmer edit section *** (ТабТовары.Номенклатура Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ТабТоварыE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабТоварыE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабТоварыE", typeof(IIS.GEN.ТабТовары));
+                }
+            }
+            
+            /// <summary>
+            /// "ТабТоварыL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабТоварыL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабТоварыL", typeof(IIS.GEN.ТабТовары));
+                }
             }
         }
     }

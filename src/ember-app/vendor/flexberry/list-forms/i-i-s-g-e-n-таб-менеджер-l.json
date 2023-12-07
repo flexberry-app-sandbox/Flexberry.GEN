@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-таб-менеджер-e",
+  "editForm": "i-i-s-g-e-n-таб-менеджер-e",
+  "external": false,
+  "caption": "Таб менеджер",
+  "name": "IISGENТабМенеджерL",
+  "className": "ТабМенеджерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-менеджер",
+      "modelProjection": "ТабМенеджерL"
+    }
+  ]
+}

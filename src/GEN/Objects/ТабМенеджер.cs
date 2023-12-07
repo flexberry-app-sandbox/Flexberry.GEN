@@ -21,13 +21,31 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ТабМенеджер.
+    /// Таб менеджер.
     /// </summary>
     // *** Start programmer edit section *** (ТабМенеджер CustomAttributes)
 
     // *** End programmer edit section *** (ТабМенеджер CustomAttributes)
     [AutoAltered()]
+    [Caption("Таб менеджер")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ТабМенеджерE", new string[] {
+            "ПланНаМесяц as \'План на месяц\'",
+            "ИтогоЗаГод as \'Итого за год\'",
+            "НомерСтроки as \'Номер строки\'",
+            "НаимМесяца as \'Наим месяца\'",
+            "РазмерПрод as \'Размер прод\'",
+            "Сотрудники as \'Сотрудники\'",
+            "Сотрудники.ФИО as \'ФИО\'"}, Hidden=new string[] {
+            "Сотрудники.ФИО"})]
+    [MasterViewDefineAttribute("ТабМенеджерE", "Сотрудники", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
+    [View("ТабМенеджерL", new string[] {
+            "ПланНаМесяц as \'План на месяц\'",
+            "ИтогоЗаГод as \'Итого за год\'",
+            "НомерСтроки as \'Номер строки\'",
+            "НаимМесяца as \'Наим месяца\'",
+            "РазмерПрод as \'Размер прод\'",
+            "Сотрудники.ФИО as \'ФИО\'"})]
     public class ТабМенеджер : ICSSoft.STORMNET.DataObject
     {
         
@@ -205,7 +223,7 @@ namespace IIS.GEN
         }
         
         /// <summary>
-        /// ТабМенеджер.
+        /// Таб менеджер.
         /// </summary>
         // *** Start programmer edit section *** (ТабМенеджер.Сотрудники CustomAttributes)
 
@@ -235,6 +253,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ТабМенеджер.Сотрудники Set end)
 
                 // *** End programmer edit section *** (ТабМенеджер.Сотрудники Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ТабМенеджерE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабМенеджерE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабМенеджерE", typeof(IIS.GEN.ТабМенеджер));
+                }
+            }
+            
+            /// <summary>
+            /// "ТабМенеджерL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ТабМенеджерL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ТабМенеджерL", typeof(IIS.GEN.ТабМенеджер));
+                }
             }
         }
     }

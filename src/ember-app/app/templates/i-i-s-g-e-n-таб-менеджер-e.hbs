@@ -1,0 +1,95 @@
+<h3 class="ui header">{{t "forms.i-i-s-g-e-n-таб-менеджер-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.планНаМесяц
+      class=(if (v-get validationModel "планНаМесяц" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-менеджер-e.планНаМесяц-caption")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-планНаМесяц=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "планНаМесяц" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.итогоЗаГод
+      class=(if (v-get validationModel "итогоЗаГод" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-менеджер-e.итогоЗаГод-caption")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-итогоЗаГод=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "итогоЗаГод" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерСтроки
+      class=(if (v-get validationModel "номерСтроки" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-менеджер-e.номерСтроки-caption")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-номерСтроки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерСтроки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.наимМесяца
+      class=(if (v-get validationModel "наимМесяца" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-менеджер-e.наимМесяца-caption")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-наимМесяца=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наимМесяца" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.размерПрод
+      class=(if (v-get validationModel "размерПрод" "isInvalid") "error")
+      label=(t "forms.i-i-s-g-e-n-таб-менеджер-e.размерПрод-caption")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-размерПрод=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "размерПрод" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-g-e-n-таб-менеджер-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фИО"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-g-e-n-таб-менеджер-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-g-e-n-таб-менеджер-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+</form>

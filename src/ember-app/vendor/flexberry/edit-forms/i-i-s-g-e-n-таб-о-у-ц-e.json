@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Номенклатура",
+      "projection": "НоменклатураL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Таб ОУЦ",
+  "name": "IISGENТабОУЦE",
+  "className": "ТабОУЦE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-о-у-ц",
+      "modelProjection": "ТабОУЦE"
+    }
+  ]
+}

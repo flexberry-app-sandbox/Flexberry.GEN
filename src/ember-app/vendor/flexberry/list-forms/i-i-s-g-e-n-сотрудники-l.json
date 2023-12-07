@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-сотрудники-e",
+  "editForm": "i-i-s-g-e-n-сотрудники-e",
+  "external": false,
+  "caption": "Сотрудники",
+  "name": "IISGENСотрудникиL",
+  "className": "СотрудникиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-сотрудники",
+      "modelProjection": "СотрудникиL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-отчет-ф-р-e",
+  "editForm": "i-i-s-g-e-n-отчет-ф-р-e",
+  "external": false,
+  "caption": "Отчет ФР",
+  "name": "IISGENОтчетФРL",
+  "className": "ОтчетФРL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-отчет-ф-р",
+      "modelProjection": "ОтчетФРL"
+    }
+  ]
+}

@@ -21,13 +21,20 @@ namespace IIS.GEN
 
 
     /// <summary>
-    /// ЕдИзм.
+    /// Ед изм.
     /// </summary>
     // *** Start programmer edit section *** (ЕдИзм CustomAttributes)
 
     // *** End programmer edit section *** (ЕдИзм CustomAttributes)
     [AutoAltered()]
+    [Caption("Ед изм")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ЕдИзмE", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "Единица as \'Единица\'"})]
+    [View("ЕдИзмL", new string[] {
+            "НомерСтроки as \'Номер строки\'",
+            "Единица as \'Единица\'"})]
     public class ЕдИзм : ICSSoft.STORMNET.DataObject
     {
         
@@ -100,6 +107,35 @@ namespace IIS.GEN
                 // *** Start programmer edit section *** (ЕдИзм.НомерСтроки Set end)
 
                 // *** End programmer edit section *** (ЕдИзм.НомерСтроки Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ЕдИзмE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ЕдИзмE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ЕдИзмE", typeof(IIS.GEN.ЕдИзм));
+                }
+            }
+            
+            /// <summary>
+            /// "ЕдИзмL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ЕдИзмL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ЕдИзмL", typeof(IIS.GEN.ЕдИзм));
+                }
             }
         }
     }

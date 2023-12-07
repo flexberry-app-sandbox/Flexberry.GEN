@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-приказ-о-у-ц-e",
+  "editForm": "i-i-s-g-e-n-приказ-о-у-ц-e",
+  "external": false,
+  "caption": "Приказ ОУЦ",
+  "name": "IISGENПриказОУЦL",
+  "className": "ПриказОУЦL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-приказ-о-у-ц",
+      "modelProjection": "ПриказОУЦL"
+    }
+  ]
+}

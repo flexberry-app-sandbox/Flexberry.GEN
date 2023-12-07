@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Ед изм",
+  "name": "IISGENЕдИзмE",
+  "className": "ЕдИзмE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-ед-изм",
+      "modelProjection": "ЕдИзмE"
+    }
+  ]
+}

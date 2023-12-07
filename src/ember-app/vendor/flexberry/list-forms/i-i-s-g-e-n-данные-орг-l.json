@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-данные-орг-e",
+  "editForm": "i-i-s-g-e-n-данные-орг-e",
+  "external": false,
+  "caption": "Данные орг",
+  "name": "IISGENДанныеОргL",
+  "className": "ДанныеОргL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-данные-орг",
+      "modelProjection": "ДанныеОргL"
+    }
+  ]
+}

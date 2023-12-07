@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-таб-товары-e",
+  "editForm": "i-i-s-g-e-n-таб-товары-e",
+  "external": false,
+  "caption": "Таб товары",
+  "name": "IISGENТабТоварыL",
+  "className": "ТабТоварыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-товары",
+      "modelProjection": "ТабТоварыL"
+    }
+  ]
+}

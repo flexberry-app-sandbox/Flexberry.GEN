@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Номенклатура",
+      "projection": "НоменклатураL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Таб товары",
+  "name": "IISGENТабТоварыE",
+  "className": "ТабТоварыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-таб-товары",
+      "modelProjection": "ТабТоварыE"
+    }
+  ]
+}

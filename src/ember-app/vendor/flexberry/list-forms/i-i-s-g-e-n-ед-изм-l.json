@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-g-e-n-ед-изм-e",
+  "editForm": "i-i-s-g-e-n-ед-изм-e",
+  "external": false,
+  "caption": "Ед изм",
+  "name": "IISGENЕдИзмL",
+  "className": "ЕдИзмL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-ед-изм",
+      "modelProjection": "ЕдИзмL"
+    }
+  ]
+}

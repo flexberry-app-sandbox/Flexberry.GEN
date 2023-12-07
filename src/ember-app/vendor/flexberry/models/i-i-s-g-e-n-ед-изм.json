@@ -27,7 +27,48 @@
   ],
   "belongsTo": [],
   "hasMany": [],
-  "projections": [],
+  "projections": [
+    {
+      "name": "ЕдИзмE",
+      "modelName": "i-i-s-g-e-n-ед-изм",
+      "attrs": [
+        {
+          "name": "номерСтроки",
+          "caption": "Номер строки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "единица",
+          "caption": "Единица",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ЕдИзмL",
+      "modelName": "i-i-s-g-e-n-ед-изм",
+      "attrs": [
+        {
+          "name": "номерСтроки",
+          "caption": "Номер строки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "единица",
+          "caption": "Единица",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

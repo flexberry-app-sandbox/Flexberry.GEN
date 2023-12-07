@@ -141,7 +141,266 @@
     }
   ],
   "hasMany": [],
-  "projections": [],
+  "projections": [
+    {
+      "name": "ОтчетФРE",
+      "modelName": "i-i-s-g-e-n-отчет-ф-р",
+      "attrs": [
+        {
+          "name": "выручка",
+          "caption": "Выручка",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "прочРасходы",
+          "caption": "Проч расходы",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "постНалОбяз",
+          "caption": "Пост нал обяз",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "прочДоходы",
+          "caption": "Проч доходы",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "дИРОтСотр",
+          "caption": "Д и р от сотр",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "сумПродаж",
+          "caption": "Сум продаж",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "себПродаж",
+          "caption": "Себ продаж",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "прочНалОбяз",
+          "caption": "Проч нал обяз",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "управРасходы",
+          "caption": "Управ расходы",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "датаОконч",
+          "caption": "Дата оконч",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "комРасходы",
+          "caption": "Ком расходы",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "номерСтроки",
+          "caption": "Номер строки",
+          "hidden": false,
+          "index": 12
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Email",
+          "lookupValueField": "email",
+          "relationName": "ДанныеОрг",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "email",
+              "caption": "Email",
+              "hidden": true,
+              "index": 14
+            }
+          ],
+          "index": 13,
+          "type": "standard",
+          "caption": "Данные орг",
+          "name": "данныеОрг",
+          "relatedTo": "i-i-s-g-e-n-данные-орг",
+          "inverse": null
+        },
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": true,
+              "index": 16
+            }
+          ],
+          "index": 15,
+          "type": "standard",
+          "caption": "Сотрудники",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-g-e-n-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ОтчетФРL",
+      "modelName": "i-i-s-g-e-n-отчет-ф-р",
+      "attrs": [
+        {
+          "name": "выручка",
+          "caption": "Выручка",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "прочРасходы",
+          "caption": "Проч расходы",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "постНалОбяз",
+          "caption": "Пост нал обяз",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "прочДоходы",
+          "caption": "Проч доходы",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "дИРОтСотр",
+          "caption": "Д и р от сотр",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "сумПродаж",
+          "caption": "Сум продаж",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "себПродаж",
+          "caption": "Себ продаж",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "прочНалОбяз",
+          "caption": "Проч нал обяз",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "управРасходы",
+          "caption": "Управ расходы",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "датаОконч",
+          "caption": "Дата оконч",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "комРасходы",
+          "caption": "Ком расходы",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "датаНачала",
+          "caption": "Дата начала",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "номерСтроки",
+          "caption": "Номер строки",
+          "hidden": false,
+          "index": 12
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ДанныеОрг",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "email",
+              "caption": "Email",
+              "hidden": false,
+              "index": 13
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Email",
+          "name": "данныеОрг",
+          "relatedTo": "i-i-s-g-e-n-данные-орг",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Сотрудники",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИО",
+              "caption": "ФИО",
+              "hidden": false,
+              "index": 14
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО",
+          "name": "сотрудники",
+          "relatedTo": "i-i-s-g-e-n-сотрудники",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Приказ ОУЦ",
+  "name": "IISGENПриказОУЦE",
+  "className": "ПриказОУЦE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-g-e-n-приказ-о-у-ц",
+      "modelProjection": "ПриказОУЦE"
+    }
+  ]
+}
